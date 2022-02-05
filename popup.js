@@ -11,7 +11,7 @@ changeColor.addEventListener("click", async () => {
 
     chrome.scripting.executeScript({
         target: { tabId: tab.id },
-        function: paste_crow,
+        function: setPageBackgroundColor,
     });
 });
 
@@ -23,9 +23,16 @@ function setPageBackgroundColor() {
     });
 }
 
-function paste_crow() {
-    // const image = document.createElement('img')
-    // image.src  = "image0.gif"
-    // document.getElementById('body').appendChild(image);
-    document.write("<img src='image0.gif' alt='alt tag'>")
+function paste_cat() {
+    image = document.createElement('img')
+    // image.src  = "0.jpeg"
+    // document.body.style.backgroundColor = '#3aa757'
+    // document.append(image);
+    // document.write("<img src='0.jpeg' alt='alt tag'>")
+}
+
+function add_img() { 
+    var img = document.createElement('img'); 
+    img.src = 'https://media.geeksforgeeks.org/wp-content/uploads/20190529122828/bs21.png'; 
+    document.getElementById('body').appendChild(img);
 }
