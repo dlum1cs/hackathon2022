@@ -4,13 +4,14 @@
     "description": "Add a cat",
     "version": "1.0",
     "permissions": ["storage", "activeTab", "scripting"],
-    "background": {
-    "service_worker": "background.js"
-    },
 
     "options_page": "options.html",
     "chrome_url_overrides" : {
-    "newtab": "masonry/index.html"
+    "newtab": "newtab.html"
+    },
+
+    "background": {
+        "service_worker": "background.js"
     },
 
     "action": {
