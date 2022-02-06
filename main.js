@@ -28,22 +28,22 @@ Cat.prototype.launch = function() {
 	var self = this;
 
 	this.cat1 = document.createElement("img");
-	this.cat1.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890291060796/Untitled_Artwork-1.png");
+	this.cat1.src = ("https://media.discordapp.net/attachments/939539790855045130/939692890291060796/Untitled_Artwork-1.png");
 	
 	this.cat2 = document.createElement("img");
-	this.cat2.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890370740286/Untitled_Artwork-4.png")
+	this.cat2.src = ("https://media.discordapp.net/attachments/939539790855045130/939692890551103508/Untitled_Artwork-2.png")
 
 	this.cat3 = document.createElement("img");
-	this.cat3.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890551103508/Untitled_Artwork-2.png")
+	this.cat3.src = ("	https://media.discordapp.net/attachments/939539790855045130/939692890752442398/Untitled_Artwork-3.png")
 
 	this.cat4 = document.createElement("img");
-	this.cat4.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890752442398/Untitled_Artwork-3.png")
+	this.cat4.src = ("https://media.discordapp.net/attachments/939539790855045130/939692890370740286/Untitled_Artwork-4.png")
 
 	this.cat5 = document.createElement("img");
-	this.cat5.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890542714900/Untitled_Artwork-6.png")
+	this.cat5.src = ("https://media.discordapp.net/attachments/939539790855045130/939692891167674438/Untitled_Artwork-5.png")
 
 	this.cat6 = document.createElement("img");
-	this.cat6.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692891167674438/Untitled_Artwork-5.png")
+	this.cat6.src = ("https://media.discordapp.net/attachments/939539790855045130/939692890542714900/Untitled_Artwork-6.png")
 
 	// this.catGif = new GIF();
  // 	this.catGif.load("https://cdn.discordapp.com/attachments/939539790855045130/939678526410461245/Untitled_Artwork.gif");
