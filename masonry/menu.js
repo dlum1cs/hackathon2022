@@ -8,6 +8,7 @@ if (cat) {
 
 const menu1 = document.querySelector("#menu1");
 if (menu1) {
+    menu1.addEventListener('click', getJoke);
     menu1.addEventListener('click', closeMenu);
 }
 const menu2 = document.querySelector("#menu2");
@@ -40,7 +41,18 @@ function catFact(event) {
     
         console.log(response);
     
+        document.querySelector('h1').innerHTML = "Random Cat Fact";
         document.querySelector('p').innerHTML = response.fact;
+    });
+}
+
+function getJoke(event) {
+    chrome.runtime.sendMessage({name: "fetchJokes"}, (response) => {
+    
+    console.log(response);
+
+    document.querySelector('h1').innerHTML = "Hmm..let's see..";
+    document.querySelector('p').innerHTML = response.fact;
     });
 }
 
@@ -49,13 +61,10 @@ function closeMenu(event) {
     console.log("hello world");
     if (click == true) {
         for (let el of document.querySelectorAll('.message')) el.style.visibility = 'visible';
-        // .message.css({visibility: visible});
         click = false;
     }
     else {
         for (let el of document.querySelectorAll('.message')) el.style.visibility = 'hidden';
-
-        // .message.css({visibility: hidden});
         click = true;
     }
 }
