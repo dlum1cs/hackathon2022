@@ -24,7 +24,7 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
 
     if(msg.name == "fetchJokes") {
         //Wait for response
-        const apiCall = 'https://icanhazdadjoke.com/';
+        const apiCall = 'https://geek-jokes.sameerkumar.website/api?format=json';
         console.log(apiCall);
         //Call api
         fetch(apiCall).then(function(res) {
