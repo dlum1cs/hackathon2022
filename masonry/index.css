@@ -66,18 +66,18 @@ body {
 
 #menu5 {
     right: 30px;
-    bottom: 420px;
+    bottom: 418px;
 }
 .cat {
     position: absolute;
 	bottom: 0px;
 	right: 0px;
 }
-#i1 {
+#normalcat {
 	visibility: visible;
 }
 
-#i2 {
+#valentinecat {
 	visibility: hidden;
 }
 

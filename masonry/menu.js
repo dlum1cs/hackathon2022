@@ -46,8 +46,8 @@ function catFact(event) {
 
         document.querySelector('h1').innerHTML = "Random Cat Fact"
         document.querySelector('p').innerHTML = response.fact;
-        document.getElementById("i1").style.visibility = "visible";
-        document.getElementById("i2").style.visibility = "hidden";
+        document.getElementById("normalcat").style.visibility = "visible";
+        document.getElementById("valentinecat").style.visibility = "hidden";
     });
 }
 
@@ -58,8 +58,12 @@ function flirt(event) {
 
         document.querySelector('h1').innerHTML = "Hey Valentine"
         document.querySelector('p').innerHTML = response.fact;
-        document.getElementById("i1").style.visibility = "hidden";
-        document.getElementById("i2").style.visibility = "visible";
+        document.getElementById("normalcat").style.visibility = "hidden";
+        document.getElementById("valentinecat").style.visibility = "visible";
+        const flower = document.querySelector("#valentinecat");
+        if (flower) {
+            flower.addEventListener('click', openMenu);
+        }
     });
 }
 
@@ -70,8 +74,8 @@ function getJoke(event) {
 
     document.querySelector('h1').innerHTML = "Hmm..let's see..";
     document.querySelector('p').innerHTML = response.fact;
-    document.getElementById("i1").style.visibility = "visible";
-    document.getElementById("i2").style.visibility = "hidden";
+    document.getElementById("normalcat").style.visibility = "visible";
+    document.getElementById("valentinecat").style.visibility = "hidden";
     });
 }
 
@@ -83,8 +87,8 @@ function getWeather(event) {
 
         document.querySelector('h1').innerHTML = "Sky of Binghamton"
         document.querySelector('p').innerHTML = response.fact + ' ' + response.temp + '°F';
-        document.getElementById("i1").style.visibility = "visible";
-        document.getElementById("i2").style.visibility = "hidden";
+        document.getElementById("normalcat").style.visibility = "visible";
+        document.getElementById("valentinecat").style.visibility = "hidden";
 
         if ((response.fact == 'Sunny') || (response.fact == 'Mostly Sunny')) {
             document.getElementById("sky").src = ("https://cdn.discordapp.com/attachments/939539790855045130/939788138639937576/IMG_8493.gif");
@@ -109,8 +113,8 @@ function inspiration(event) {
 
         document.querySelector('h1').innerHTML = "A Inpirational Quote Just For You";
         document.querySelector('p').innerHTML = response.quote + '-' + response.author;
-        document.getElementById("i1").style.visibility = "visible";
-        document.getElementById("i2").style.visibility = "hidden";
+        document.getElementById("normalcat").style.visibility = "visible";
+        document.getElementById("valentinecat").style.visibility = "hidden";
     });
 }
 
@@ -124,6 +128,7 @@ function closeMenu(event) {
     else {
         for (let el of document.querySelectorAll('.message')) el.style.visibility = 'hidden';
         document.getElementById("sky").style.visibility = 'hidden';
+        document.getElementById("valentinecat").style.visibility = 'hidden';
         // .message.css({visibility: hidden});
         click = true;
     }
