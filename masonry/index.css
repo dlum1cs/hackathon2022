@@ -81,6 +81,14 @@ body {
 	bottom: 175px;
 	right: 35px;
 }
+
+.weather {
+     position: absolute;
+     visibility: hidden;
+     left: 0px;
+     top: 0px;
+}
+
 /*.square {
       background-color: #2ecc71;
       width: 200px;
