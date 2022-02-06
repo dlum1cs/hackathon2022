@@ -115,6 +115,9 @@ function inspiration(event) {
         document.querySelector('p').innerHTML = response.quote + '-' + response.author;
         document.getElementById("normalcat").style.visibility = "visible";
         document.getElementById("valentinecat").style.visibility = "hidden";
+        document.querySelector('p').style.textAlign = "center";
+        document.querySelector('p').innerHTML = response.quote + "<br><br>- " + response.author;
+        
     });
 }
 
