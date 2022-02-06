@@ -16,8 +16,8 @@ Cat.prototype.launch = function() {
 	this.context = this.canvas.getContext("2d");
 	document.body.appendChild(this.canvas);
 	this.canvas.style.position = "fixed";
-	this.canvas.style.top = window.innerHeight-331+"px";
-	this.canvas.style.left = window.innerWidth-379+"px";
+	this.canvas.style.top = window.innerHeight-165+"px";
+	this.canvas.style.left = window.innerWidth-189+"px";
 	this.canvas.style.width = window.innerWidth + "px";
 	this.canvas.style.height = window.innerHeight + "px";
 	this.canvas.style.zIndex = "25000";
@@ -51,8 +51,8 @@ Cat.prototype.launch = function() {
 Cat.prototype.resize = function() {
 	this.canvas.width = window.innerWidth;
 	this.canvas.height = window.innerHeight;
-	this.canvas.style.top = window.innerHeight-400+"px";
-	this.canvas.style.left = window.innerWidth-400+"px";
+	this.canvas.style.top = window.innerHeight-165+"px";
+	this.canvas.style.left = window.innerWidth-189+"px";
     this.canvas.style.width = window.innerWidth + "px";
     this.canvas.style.height = window.innerHeight + "px";
 }
@@ -62,7 +62,7 @@ let framesPerSecond = 2;
 Cat.prototype.animate1 = function() {
 	let ctx = this.context;
 	ctx.clearRect(0,0, this.canvas.width, this.canvas.height);
-	ctx.drawImage(this.cat1, 0, 0);
+	ctx.drawImage(this.cat1, 0, 0, 189, 165);
 	ctx.save();
 	ctx.restore();
 	
@@ -77,7 +77,7 @@ Cat.prototype.animate1 = function() {
 Cat.prototype.animate2 = function() {
 	let ctx = this.context;
 	ctx.clearRect(0,0, this.canvas.width, this.canvas.height);
-	ctx.drawImage(this.cat2, 0, 0);
+	ctx.drawImage(this.cat2, 0, 0, 189, 165);
 
 	let self = this;
 	setTimeout(() => {
@@ -90,7 +90,7 @@ Cat.prototype.animate2 = function() {
 Cat.prototype.animate3 = function() {
 	let ctx = this.context;
 	ctx.clearRect(0,0, this.canvas.width, this.canvas.height);
-	ctx.drawImage(this.cat3, 0, 0);
+	ctx.drawImage(this.cat3, 0, 0, 189, 165);
 
 	let self = this;
 	setTimeout(() => {
@@ -103,7 +103,7 @@ Cat.prototype.animate3 = function() {
 Cat.prototype.animate4 = function() {
 	let ctx = this.context;
 	ctx.clearRect(0,0, this.canvas.width, this.canvas.height);
-	ctx.drawImage(this.cat4, 0, 0);
+	ctx.drawImage(this.cat4, 0, 0, 189, 165);
 
 	let self = this;
 	setTimeout(() => {
@@ -116,7 +116,7 @@ Cat.prototype.animate4 = function() {
 Cat.prototype.animate5 = function() {
 	let ctx = this.context;
 	ctx.clearRect(0,0, this.canvas.width, this.canvas.height);
-	ctx.drawImage(this.cat5, 0, 0);
+	ctx.drawImage(this.cat5, 0, 0, 189, 165);
 
 	let self = this;
 	setTimeout(() => {
@@ -129,7 +129,7 @@ Cat.prototype.animate5 = function() {
 Cat.prototype.animate6 = function() {
 	let ctx = this.context;
 	ctx.clearRect(0,0, this.canvas.width, this.canvas.height);
-	ctx.drawImage(this.cat6, 0, 0);
+	ctx.drawImage(this.cat6, 0, 0, 189, 165);
 
 	let self = this;
 	setTimeout(() => {

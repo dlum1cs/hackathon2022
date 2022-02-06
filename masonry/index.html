@@ -1,13 +1,26 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
 <head>
-  <title>new tab</title>
-	<link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <title>Cat Fact</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body,html{
+            background-color: white;
+            font-size: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+        }
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
 </head>
-
 <body>
-
-  <!-- <div class="square"></div> -->
   <footer id = "footer">
   <img id = "cat" src ="image0.gif" alt = "test" style = "width:200px;height:200px" class = "i1">
   <img id = "fact" src ="fact.png" alt = "dumb" style = "width:150px;height:50px" class = "i2">
@@ -17,10 +30,12 @@
   <div id="menu3" class = "message">Flirt</div>
   <div id="menu4" class = "message">Ask about the weather.</div>
   <div id="menu5" class = "message">Get inspiration.</div>
+  
   <script src = "menu.js"></script>
-
-
-
+    <section>
+        <h1>Random Cat Fact</h1>
+        <p>Random Fact...</p>
+    </section>
+    <script src="script.js"></script>
 </body>
-
 </html>
