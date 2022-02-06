@@ -21,6 +21,7 @@ if (menu3) {
 }
 const menu4 = document.querySelector("#menu4");
 if (menu4) {
+    menu4.addEventListener('click', getWeather);
     menu4.addEventListener('click', closeMenu);
 }
 const menu5 = document.querySelector("#menu5");
@@ -39,10 +40,35 @@ function catFact(event) {
         //Wait for response
     
         console.log(response);
-    
+
+        document.querySelector('h1').innerHTML = "Random Cat Fact"
         document.querySelector('p').innerHTML = response.fact;
     });
 }
+
+function getWeather(event) {
+    chrome.runtime.sendMessage({name: "weather"}, (response) => {
+        //Wait for response
+    
+        console.log(response);
+
+        document.querySelector('h1').innerHTML = "Current weather"
+        document.querySelector('p').innerHTML = response.fact;
+        if ((response.fact == 'Sunny') || (response.fact == 'Mostly Sunny')) {
+            document.getElementById("sky").src = ("https://cdn.discordapp.com/attachments/939539790855045130/939788138639937576/IMG_8493.gif");
+            document.getElementById("sky").style.visibility = 'visible';
+        }
+        if ((response.fact == 'Clear') || (response.fact == 'Mostly Clear')) {
+            document.getElementById("sky").src = ("https://media.discordapp.net/attachments/939539790855045130/939799418838876190/Untitled_Artwork.gif");
+            document.getElementById("sky").style.visibility = 'visible';
+        }
+        if ((response.fact == 'Mostly Cloudy') || (response.fact == 'Partly Cloudy') || (response.fact == 'Partly Sunny')) {
+            document.getElementById("sky").src = ("https://media.discordapp.net/attachments/939539790855045130/939792519435272212/Untitled_Artwork.gif");
+            document.getElementById("sky").style.visibility = 'visible';
+        }
+    });
+}
+
 
 function closeMenu(event) {
     // first click should close the message boxes 
@@ -54,7 +80,7 @@ function closeMenu(event) {
     }
     else {
         for (let el of document.querySelectorAll('.message')) el.style.visibility = 'hidden';
-
+        document.getElementById("sky").style.visibility = 'hidden';
         // .message.css({visibility: hidden});
         click = true;
     }
@@ -70,7 +96,6 @@ function openMenu(event) {
     }
     else {
         for (let el of document.querySelectorAll('.message')) el.style.visibility = 'hidden';
-
         // .message.css({visibility: hidden});
         click = true;
     }
