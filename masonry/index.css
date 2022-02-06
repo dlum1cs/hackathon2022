@@ -12,6 +12,23 @@ body {
     /*background-image: url("image0.gif");*/
 }
 
+.text {
+    position: absolute;
+    visibility: hidden;
+    text-align: center;
+    background-color: #FFFF;
+    color: #000000; 
+    border-radius: 3px;
+    border-color: #000000;
+    border-style: solid;
+    display: block;
+
+    width: 150px;
+    padding: 10px;
+    right: 30px;
+    bottom: 200px;
+}
+
 .message {
     position: absolute;
     visibility: hidden;

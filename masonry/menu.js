@@ -8,6 +8,7 @@ if (cat) {
 
 const menu1 = document.querySelector("#menu1");
 if (menu1) {
+    menu1.addEventListener('click', getJoke);
     menu1.addEventListener('click', closeMenu);
 }
 const menu2 = document.querySelector("#menu2");
@@ -17,6 +18,7 @@ if (menu2) {
 }
 const menu3 = document.querySelector("#menu3");
 if (menu3) {
+    menu3.addEventListener('click', flirt);
     menu3.addEventListener('click', closeMenu);
 }
 const menu4 = document.querySelector("#menu4");
@@ -44,6 +46,26 @@ function catFact(event) {
 
         document.querySelector('h1').innerHTML = "Random Cat Fact"
         document.querySelector('p').innerHTML = response.fact;
+    });
+}
+
+function flirt(event) {
+    chrome.runtime.sendMessage({name: "flirt"}, (response) => {
+        //Wait for response
+        console.log(response);
+
+        document.querySelector('h1').innerHTML = "Hey Valentine"
+        document.querySelector('p').innerHTML = response.fact;
+    });
+}
+
+function getJoke(event) {
+    chrome.runtime.sendMessage({name: "fetchJokes"}, (response) => {
+    
+    console.log(response);
+
+    document.querySelector('h1').innerHTML = "Hmm..let's see..";
+    document.querySelector('p').innerHTML = response.fact;
     });
 }
 
@@ -87,7 +109,6 @@ function closeMenu(event) {
     console.log("hello world");
     if (click == true) {
         for (let el of document.querySelectorAll('.message')) el.style.visibility = 'visible';
-        // .message.css({visibility: visible});
         click = false;
     }
     else {
