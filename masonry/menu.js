@@ -12,6 +12,7 @@ if (menu1) {
 }
 const menu2 = document.querySelector("#menu2");
 if (menu2) {
+    menu2.addEventListener('click', catFact);
     menu2.addEventListener('click', closeMenu);
 }
 const menu3 = document.querySelector("#menu3");
@@ -33,8 +34,18 @@ if (menu5) {
 function hideImage(image) {
     document.getElementById(image).style.visibility = "hidden";
 }*/
+function catFact(event) {
+    chrome.runtime.sendMessage({name: "fetchFacts"}, (response) => {
+        //Wait for response
+    
+        console.log(response);
+    
+        document.querySelector('p').innerHTML = response.fact;
+    });
+}
+
 function closeMenu(event) {
-    // first click should open the menu, second click on cat will close the menu
+    // first click should close the message boxes 
     console.log("hello world");
     if (click == true) {
         for (let el of document.querySelectorAll('.message')) el.style.visibility = 'visible';
