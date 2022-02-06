@@ -51,8 +51,8 @@ Cat.prototype.launch = function() {
 Cat.prototype.resize = function() {
 	this.canvas.width = window.innerWidth;
 	this.canvas.height = window.innerHeight;
-	this.canvas.style.top = window.innerHeight-400+"px";
-	this.canvas.style.left = window.innerWidth-400+"px";
+	this.canvas.style.top = window.innerHeight-165+"px";
+	this.canvas.style.left = window.innerWidth-189+"px";
     this.canvas.style.width = window.innerWidth + "px";
     this.canvas.style.height = window.innerHeight + "px";
 }
