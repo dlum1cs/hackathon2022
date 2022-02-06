@@ -28,7 +28,7 @@ Cat.prototype.launch = function() {
 	var self = this;
 
 	this.cat1 = document.createElement("img");
-	this.cat1.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890291060796/Untitled_Artwork-1.png");
+	this.cat1.src = ("https://media.discordapp.net/attachments/939539790855045130/939692890291060796/Untitled_Artwork-1.png");
 	
 	this.cat2 = document.createElement("img");
 	this.cat2.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890551103508/Untitled_Artwork-2.png")
