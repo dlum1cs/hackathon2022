@@ -52,8 +52,9 @@ function getWeather(event) {
     
         console.log(response);
 
-        document.querySelector('h1').innerHTML = "Current weather"
+        document.querySelector('h1').innerHTML = "Sky of Binghamton"
         document.querySelector('p').innerHTML = response.fact;
+
         if ((response.fact == 'Sunny') || (response.fact == 'Mostly Sunny')) {
             document.getElementById("sky").src = ("https://cdn.discordapp.com/attachments/939539790855045130/939788138639937576/IMG_8493.gif");
             document.getElementById("sky").style.visibility = 'visible';
