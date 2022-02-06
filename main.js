@@ -31,19 +31,19 @@ Cat.prototype.launch = function() {
 	this.cat1.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890291060796/Untitled_Artwork-1.png");
 	
 	this.cat2 = document.createElement("img");
-	this.cat2.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890370740286/Untitled_Artwork-4.png")
-
+	this.cat2.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890551103508/Untitled_Artwork-2.png")
+	
 	this.cat3 = document.createElement("img");
-	this.cat3.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890551103508/Untitled_Artwork-2.png")
+	this.cat3.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890752442398/Untitled_Artwork-3.png")
 
 	this.cat4 = document.createElement("img");
-	this.cat4.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890752442398/Untitled_Artwork-3.png")
+	this.cat4.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890370740286/Untitled_Artwork-4.png")
 
 	this.cat5 = document.createElement("img");
-	this.cat5.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890542714900/Untitled_Artwork-6.png")
-
+	this.cat5.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692891167674438/Untitled_Artwork-5.png")
+	
 	this.cat6 = document.createElement("img");
-	this.cat6.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692891167674438/Untitled_Artwork-5.png")
+	this.cat6.src = ("https://cdn.discordapp.com/attachments/939539790855045130/939692890542714900/Untitled_Artwork-6.png")
 
 	// this.catGif = new GIF();
  // 	this.catGif.load("https://cdn.discordapp.com/attachments/939539790855045130/939678526410461245/Untitled_Artwork.gif");
@@ -62,10 +62,11 @@ Cat.prototype.resize = function() {
 	}
 }
 
-let framesPerSecond = 5;
+let framesPerSecond = 2;
 
 Cat.prototype.animate1 = function() {
 	var ctx = this.context;
+	ctx.clearRect(0,0, this.canvas.width, this.canvas.height);
 	ctx.drawImage(this.cat1, 0, 0);
 	ctx.save();
 	ctx.restore();
