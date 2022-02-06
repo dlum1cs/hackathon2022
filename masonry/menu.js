@@ -107,7 +107,9 @@ function inspiration(event) {
         console.log(response);
 
         document.querySelector('h1').innerHTML = "A Inpirational Quote Just For You";
-        document.querySelector('p').innerHTML = response.quote + '-' + response.author;
+        document.querySelector('p').style.textAlign = "center";
+        document.querySelector('p').innerHTML = response.quote + "<br><br>- " + response.author;
+        
     });
 }
 
