@@ -22,6 +22,27 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
         });
     }
 
+    if(msg.name == "flirt") {
+        //Wait for response
+        //const strLen = '100';
+        const apiCall = 'http://getpickuplines.herokuapp.com/lines/random';
+        console.log(apiCall);
+        //Call api
+        fetch(apiCall).then(function(res) {
+            //Wait for response
+            if (res.status !== 200) {
+                response({fact: 'Error'});
+                return;
+            }
+            res.json().then(function(data) {
+                //Send the response
+                response({fact: data.line});
+            });
+        }).catch(function(err) {
+            response({data: 'Error'});
+        });
+    }
+
     if(msg.name == "weather") {
         // response.fact = shortForecast (clear, sunnny, etc.) of current binghamton weather
 

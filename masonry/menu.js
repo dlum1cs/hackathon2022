@@ -17,6 +17,7 @@ if (menu2) {
 }
 const menu3 = document.querySelector("#menu3");
 if (menu3) {
+    menu3.addEventListener('click', flirt);
     menu3.addEventListener('click', closeMenu);
 }
 const menu4 = document.querySelector("#menu4");
@@ -42,6 +43,17 @@ function catFact(event) {
         console.log(response);
 
         document.querySelector('h1').innerHTML = "Random Cat Fact"
+        document.querySelector('p').innerHTML = response.fact;
+    });
+}
+
+function flirt(event) {
+    chrome.runtime.sendMessage({name: "flirt"}, (response) => {
+        //Wait for response
+    
+        console.log(response);
+
+        document.querySelector('h1').innerHTML = "Hey Valentine"
         document.querySelector('p').innerHTML = response.fact;
     });
 }
