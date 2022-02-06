@@ -68,18 +68,17 @@ body {
     right: 30px;
     bottom: 420px;
 }
-
-.i1 {
-	position: absolute;
+.cat {
+    position: absolute;
 	bottom: 0px;
 	right: 0px;
 }
+#i1 {
+	visibility: visible;
+}
 
-.i2 {
-	position: relative;
+#i2 {
 	visibility: hidden;
-	bottom: 175px;
-	right: 35px;
 }
 
 .weather {
