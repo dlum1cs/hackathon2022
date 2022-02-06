@@ -28,6 +28,7 @@ if (menu4) {
 }
 const menu5 = document.querySelector("#menu5");
 if (menu5) {
+    menu5.addEventListener('click', inspiration);
     menu5.addEventListener('click', closeMenu);
 }
 /*function showImage(image) {
@@ -92,6 +93,16 @@ function getWeather(event) {
     });
 }
 
+function inspiration(event) {
+    chrome.runtime.sendMessage({name: "inspiration"}, (response) => {
+        //Wait for response
+    
+        console.log(response);
+
+        document.querySelector('h1').innerHTML = "A Inpirational Quote Just For You";
+        document.querySelector('p').innerHTML = response.quote + '-' + response.author;
+    });
+}
 
 function closeMenu(event) {
     // first click should close the message boxes 

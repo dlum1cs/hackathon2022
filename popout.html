@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="popout.css">
+  <style>
+    body {
+      width: 300px;
+      margin:0;
+      padding:0;
+      list-style: none;
+    }
+    .myUL li{
+      padding:10px;
+      display:flex;
+      justify-content: space-between;
+    }
+    .myUL li:hover{
+      background:rgba(90, 90, 90, 0.25);
+    }
+    .myUL li.done .item{
+      text-decoration: line-through;
+    }
+    .myUL div span{
+      margin:5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <style>
+  </style>
+  <div id="myDIV" class="header">
+    <h2>Task List</h2>
+    <input type="text" id="myInput" placeholder="Task...">
+    <span onclick="newElement()" class="addBtn">Add</span>
+  </div>
+
+
+  <!-- <button class="addTask">Add</button>
+  <div class="newTask">
+    <input type="text"/>
+    <button>Save</button>
+  </div> -->
+
+  <ul id="myUL">
+    <li>Study for exam</li>
+    <li class="checked">Pay bills</li>
+    <li>Grocery shopping</li>
+    <li>Clean apartment</li>
+    <li>Take cat to vet</li>
+  </ul>
+  <script src="popout.js"></script>
+</body>
+
+</html>
