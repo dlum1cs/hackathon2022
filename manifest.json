@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "MACE",
-    "description": "Add a cat",
+    "name": "My Adorable Cat",
+    "description": "Add a cute cat to your web experience",
     "version": "1.0",
     "permissions": ["storage", "activeTab", "scripting"],
 
@@ -17,16 +17,16 @@
     "action": {
         "default_popup": "popout.html",
         "default_icon": {
-            "16": "/images/cat2-16.png",
-            "48": "/images/cat2-48.png",
-            "128": "/images/cat2-128.png"
+            "16": "/images/caticon-16.png",
+            "48": "/images/caticon-48.png",
+            "128": "/images/caticon-128.png"
         }
     },
 
     "icons": {
-        "16": "/images/cat1-16.png",
-        "48": "/images/cat1-48.png",
-        "128": "/images/cat1-128.png"
+        "16": "/images/caticon-16.png",
+        "48": "/images/caticon-48.png",
+        "128": "/images/caticon-128.png"
     },
 
     "content_scripts": [
