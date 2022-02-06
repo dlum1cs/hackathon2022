@@ -1,4 +1,3 @@
-// Listen for messages
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
   
     if(msg.name == "fetchFacts") {
@@ -62,6 +61,7 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
             response({data: 'Error'});
         });
     }
+
     if(msg.name == "weather") {
         // response.fact = shortForecast (clear, sunnny, etc.) of current binghamton weather
 
@@ -102,7 +102,7 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
 
     if(msg.name == "inspiration") {
        
-        const apiCall = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?';
+        const apiCall = 'https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en';
         console.log(apiCall);
         //Call api
         fetch(apiCall).then(function(res) {
@@ -123,4 +123,3 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
     return true;
 
   });
-
