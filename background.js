@@ -49,7 +49,7 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
                     }
                     res.json().then(function(data2) {
                         //Send the response
-                        response({fact: data2.properties.periods[0].shortForecast});
+                        response({fact: data2.properties.periods[0].shortForecast, temp: data2.properties.periods[0].temperature});
                     });
                 }).catch(function(err) {
                     response({data: 'Error'});
