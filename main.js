@@ -1,12 +1,15 @@
 let Cat = function() {
 	this.canvas = null;
 	this.context = null;
+
+	this.mouse_x = null;
+	this.mouse_y = null;
+
 	let self = this;
 
 	window.addEventListener("resize", function() {
 		self.resize();
 	});
-
 };
 
 Cat.prototype.launch = function() {
@@ -40,6 +43,15 @@ Cat.prototype.launch = function() {
 	
 	this.cat6 = document.createElement("img");
 	this.cat6.src = ("https://media.discordapp.net/attachments/939539790855045130/939716725123985458/Untitled_Artwork-6.png")
+
+
+	this.canvas.addEventListener("mousedown", function(ev) {
+		self.mouse_x = ev.clientX;
+		self.mouse_y = ev.clientY;
+		ev.preventDefault();
+	});
+
+
 
 	// enter loop
 	let self = this;
