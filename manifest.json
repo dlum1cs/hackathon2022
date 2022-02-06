@@ -15,7 +15,7 @@
     },
 
     "action": {
-        "default_popup": "popup.html",
+        "default_popup": "popout.html",
         "default_icon": {
             "16": "/images/cat2-16.png",
             "48": "/images/cat2-48.png",
