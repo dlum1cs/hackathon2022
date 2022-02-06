@@ -56,6 +56,13 @@ function flirt(event) {
 
         document.querySelector('h1').innerHTML = "Hey Valentine"
         document.querySelector('p').innerHTML = response.fact;
+        const flower = document.querySelector(".valentine");
+        if (flower) {
+            flower.addEventListener('click', openMenu);
+        }
+        document.getElementById("valentine").style.visibility = 'hidden';
+        document.getElementById("valentine").src = (" https://media.discordapp.net/attachments/939539790855045130/939758067241877554/Untitled_Artwork.gif");
+        document.getElementById("valentine").style.visibility = 'visible';
     });
 }
 
@@ -114,6 +121,7 @@ function closeMenu(event) {
     else {
         for (let el of document.querySelectorAll('.message')) el.style.visibility = 'hidden';
         document.getElementById("sky").style.visibility = 'hidden';
+        document.getElementById("valentine").style.visibility = 'hidden';
         // .message.css({visibility: hidden});
         click = true;
     }
