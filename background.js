@@ -1,4 +1,4 @@
-//Listen for messages
+// Listen for messages
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
   
     if(msg.name == "fetchFacts") {
@@ -54,6 +54,26 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
                 }).catch(function(err) {
                     response({data: 'Error'});
                 });
+            });
+        }).catch(function(err) {
+            response({data: 'Error'});
+        });
+    }
+
+    if(msg.name == "inspiration") {
+       
+        const apiCall = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?';
+        console.log(apiCall);
+        //Call api
+        fetch(apiCall).then(function(res) {
+            //Wait for response
+            if (res.status !== 200) {
+                response({fact: 'Error'});
+                return;
+            }
+            res.json().then(function(data3) {
+                //Send the response
+                response({quote: data3.quoteText, author: data3.quoteAuthor});
             });
         }).catch(function(err) {
             response({data: 'Error'});
