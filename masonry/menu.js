@@ -18,11 +18,11 @@ function openMenu(event) {
     // first click should open the menu, second click on cat will close the menu
     console.log("hello world");
     if (click == true) {
-        messageBox.css({visability = visible});
+        messageBox.css({"visibility" : "visible"});
         click = false;
     }
     else {
-        messageBox.css({visability = hidden});
+        messageBox.css({"visibility" : "hidden"});
         click = true;
     }
 }
